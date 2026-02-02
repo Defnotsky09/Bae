@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For My Bae ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffb6c1, #ffe4e1);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 30px;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #ff3366;
+      font-size: 50px;
+    }
+    p {
+      font-size: 22px;
+      color: #444;
+      max-width: 800px;
+      margin: auto;
+    }
+    .heart {
+      position: fixed;
+      color: red;
+      animation: float 5s linear infinite;
+      font-size: 24px;
+    }
+    @keyframes float {
+      from { bottom: 0; opacity: 1; }
+      to { bottom: 100%; opacity: 0; }
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 15px;
+    }
+    img {
+      width: 200px;
+      border-radius: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Hey Bae.. ❤️</h1>
+
+<p>
+From the moment you came into my life, everything changed.  
+The world feels softer when you smile.  
+My bad days don’t feel so bad when I hear your voice.  
+You became my favorite thought without even trying.  
+
+I never knew love could feel this safe and this warm until you.  
+Every little thing reminds me of you.  
+And every heartbeat of mine quietly says your name.  
+
+So I made this tiny corner of the internet just for you…  
+because you deserve something as special as the way you make me feel.  
+I might not be near you for now. But we surely will be soon..  
+And this is the best I could do from so far away..  
+I LOVE YOU SO MUCHH 💕
+</p>
+
+<h2>Our Memories 📸</h2>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+<h2>One Important Question 💌</h2>
+
+<button id="yesBtn" onclick="yes()">Yes 💖</button>
+<button id="noBtn" onclick="turnYes()">No 😢</button>
+
+<audio controls autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function yes() {
+  document.body.innerHTML =
+    "<h1>YAYYY 😭💖</h1>" +
+    "<p>You just made me the happiest person alive. I love you more than words can ever explain mwahh❤️</p>";
+}
+
+function turnYes() {
+  let btn = document.getElementById("noBtn");
+
+  // Move button to random place (mobile friendly)
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 70 + "vw";
+  btn.style.top = Math.random() * 70 + "vh";
+
+  // Change NO into YES
+  btn.innerHTML = "Yes 💖";
+  btn.onclick = yes;
+}
+
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}, 300);
+</script>
+
+</body>
+</html>
